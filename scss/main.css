@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&family=Lexend+Deca&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
+  background: url('data:image/svg+xml;utf8,<svg width="1085" height="673" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="100%" y1="69.237%" x2="9.399%" y2="32.159%" id="a"><stop stop-color="#8A4389" stop-opacity="0" offset="0%"/><stop stop-color="#512051" offset="100%"/><stop stop-color="#512051" offset="100%"/><stop stop-color="#512051" offset="100%"/></linearGradient></defs><path d="M355 800c74.356-153.934 215.022-251.268 422-292 310.466-61.099 192.94-122.724 345.47-245.025C1224.157 181.442 1330 136.116 1440 127v673H355z" transform="translate(-355 -127)" fill="url(#a)" fill-rule="evenodd" opacity=".05"/></svg>');
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 12vh;
+}
+.container .content {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  gap: 9vh;
+}
+.container .content .users {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.container .content .users .text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 43%;
+}
+.container .content .users .text h2 {
+  width: 59%;
+  font-size: 2.2rem;
+  color: hsl(300, 43%, 22%);
+}
+.container .content .users .text p {
+  line-height: 1.7rem;
+  color: hsl(303, 10%, 53%);
+}
+.container .content .users .reviews {
+  width: 46%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.container .content .users .reviews .review {
+  background: hsl(300, 24%, 96%);
+  color: hsl(300, 43%, 22%);
+  display: flex;
+  justify-content: flex-start;
+  padding: 15px 48px 15px 15px;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 29px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.container .content .users .reviews .review .starts {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+.container .content .users .reviews .review:nth-child(2) {
+  align-self: center;
+}
+.container .content .users .reviews .review:nth-child(3) {
+  align-self: flex-end;
+}
+.container .content .feedback {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 33vh;
+}
+@media (max-width: 767px) {
+  .container .content .feedback {
+    gap: 18px;
+  }
+}
+.container .content .feedback .card {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  width: 353px;
+  height: 220px;
+  background-color: hsl(300, 43%, 22%);
+  border-radius: 5px;
+  padding: 32px 29px 28px 29px;
+  color: white;
+}
+.container .content .feedback .card .info {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.container .content .feedback .card .info img {
+  width: 41.3px;
+  border-radius: 50%;
+}
+.container .content .feedback .card .info h5, .container .content .feedback .card .info span {
+  font-size: 0.9rem;
+}
+.container .content .feedback .card .info span {
+  color: hsl(333, 80%, 67%);
+}
+.container .content .feedback .card .feed p {
+  font-size: 0.89rem;
+  line-height: 1.5rem;
+}
+.container .content .feedback .card:nth-child(2) {
+  align-self: center;
+}
+.container .content .feedback .card:nth-child(3) {
+  align-self: flex-end;
+}
+
+@media (max-width: 376px) {
+  .container .content {
+    width: 88%;
+  }
+  .container .content .users {
+    flex-direction: column;
+    gap: 41px;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .container .content .users .text {
+    width: 100%;
+    gap: 20px;
+  }
+  .container .content .users .text h2 {
+    text-align: center;
+    width: 100%;
+  }
+  .container .content .users .reviews {
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .container .content .users .reviews .review {
+    width: 100%;
+    flex-direction: column;
+    gap: 5px;
+  }
+}/*# sourceMappingURL=main.css.map */

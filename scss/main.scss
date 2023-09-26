@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&family=Lexend+Deca&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'League Spartan', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
+    background: url('data:image/svg+xml;utf8,<svg width="1085" height="673" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="100%" y1="69.237%" x2="9.399%" y2="32.159%" id="a"><stop stop-color="#8A4389" stop-opacity="0" offset="0%"/><stop stop-color="#512051" offset="100%"/><stop stop-color="#512051" offset="100%"/><stop stop-color="#512051" offset="100%"/></linearGradient></defs><path d="M355 800c74.356-153.934 215.022-251.268 422-292 310.466-61.099 192.94-122.724 345.47-245.025C1224.157 181.442 1330 136.116 1440 127v673H355z" transform="translate(-355 -127)" fill="url(#a)" fill-rule="evenodd" opacity=".05"/></svg>');
+}
+
+// Variables
+$Dark-maginta: hsl(300, 43%, 22%);
+$Grayish-Magenta: hsl(300, 24%, 96%);
+$Soft-Pink: hsl(333, 80%, 67%);
+
+$Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+$Light-Grayish-Magenta: hsl(300, 24%, 96%);
+$White: hsl(0, 0%, 100%);
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 12vh;
+    .content{
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        gap: 9vh;
+        .users{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .text{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                width: 43%;
+                h2{
+                    width: 59%;
+                    font-size: 2.2rem;
+                    color: $Dark-maginta;
+                    // font-weight: ;
+                }
+                p{
+                    line-height: 1.7rem;
+                    color: $Dark-Grayish-Magenta;
+                }
+            }
+            .reviews{
+                width: 46%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                .review{
+                    background: $Light-Grayish-Magenta;
+                    color: $Dark-maginta;
+                    display: flex;
+                    justify-content: flex-start;
+                    padding: 15px 48px 15px 15px;
+                    width: fit-content;
+                    gap: 29px;
+                    border-radius: 5px;
+                    font-weight: bold;
+                    .starts{
+                        display: flex;
+                        justify-content: flex-start;
+                        gap: 0.5rem;
+                    }
+                    &:nth-child(2) {
+                        align-self: center;
+                    }
+                    &:nth-child(3) {
+                        align-self: flex-end;
+                    }
+                }
+            }
+        }
+        .feedback{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            @media (max-width : 767px) {
+                gap: 18px;
+            }
+            height: 33vh;
+            .card{
+                display: flex;
+                flex-direction: column;
+                gap: 19px;
+                width: 353px;
+                height: 220px;
+                background-color: $Dark-maginta;
+                border-radius: 5px;
+                padding: 32px 29px 28px 29px;
+                color: white;
+                .info{
+                    display: flex;
+                    justify-content: flex-start;
+                    gap: 1rem;
+                    img{
+                        width: 41.300px;
+                        border-radius: 50%;
+                    }
+                    h5,span{
+                        font-size: .9rem;
+                    }
+                    span{
+                        color: $Soft-Pink;
+                    }
+                }
+                .feed{
+                    p{
+                        font-size: .89rem;
+                        line-height: 1.5rem;
+                    }
+                }
+                &:nth-child(2) {
+                    align-self: center;
+                }
+                &:nth-child(3) {
+                    align-self: flex-end;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 376px){
+    .container{
+        .content{
+            width: 88%;
+            .users{
+                flex-direction: column;
+                gap: 41px;
+                flex-wrap: wrap;
+                text-align: center;
+                .text{
+                    width: 100%;
+                    gap: 20px;
+                    h2{
+                        text-align: center;
+                        width: 100%;
+                    }
+                }
+                .reviews{
+                    width: 100%;
+                    flex-direction: column;
+                    gap: 12px;
+                    .review{
+                        width: 100%;
+                        flex-direction: column;
+                        gap: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
